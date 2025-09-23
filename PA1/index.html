@@ -68,7 +68,7 @@
 
             <section class="mb-12">
                 <h2 class="text-2xl font-bold text-slate-800 border-b pb-2 mb-4">
-                    <i class="fas fa-rocket text-slate-400 mr-2"></i>Introduction
+                    <i class="fas fa-rocket text-slate-400 mr-2"></i>Task Requirement
                 </h2>
                 <img src="https://timgm.eprice.com.hk/hk/mobile/img/2022-04/01/219728/eprice_1_bf21f176ac206256c8a69ec54dabf2e8.jpg" style="max-width:600px;width:100%"  alt="Assignment Banner" class="w-full rounded-lg mb-3">
                 <p class="text-lg leading-relaxed">
@@ -98,12 +98,39 @@
                     <i class="fas fa-bullseye text-slate-400 mr-2"></i>Objectives
                 </h2>
                 <ul class="text-lg leading-relaxed checklist">
-                    <li>Analyze requirements from a real-world document (a magazine article).</li>
+                    <li>Create a python program.</li>
+                    <li>Analyze requirements from magazine article provided by eLibrary.</li>
                     <li>Design and implement a decision-making process using conditional logic (`if-else`).</li>
                     <li>Handle user input and perform basic data parsing.</li>
-                    <li>Structure a program that supports multiple languages.</li>
-                    <li>Create a user-friendly and interactive command-line interface.</li>
+                    <li>Structure a program that supports translation using AI.</li>
                 </ul>
+            </section>
+
+            <section class="mb-12">
+                 <h2 class="text-2xl font-bold text-slate-800 border-b pb-2 mb-4">
+                    <i class="fas fa-sitemap text-slate-400 mr-2"></i>Decision Logic
+                </h2>
+                <div class="text-lg leading-relaxed bg-slate-50 p-6 rounded-lg border border-slate-200">
+                    <p class="font-bold mb-4">Your program should use the following logic, derived from the magazine article:</p>
+                    <ul class="list-disc list-inside space-y-4">
+                        <li>
+                            <strong>If ISP speed is ≤ ___________ Gbps, recommend Wi-Fi 6:</strong>
+                            <ul class="list-circle list-inside pl-6 mt-2 space-y-2">
+                                <li>If user wants <strong class="text-blue-600">_________________</strong> → Recommend _____________________.</li>
+                                <li>If user wants <strong class="text-blue-600">_________________</strong> → Recommend <code>Asus RT-AX86U</code>.</li>
+                                <li>If user wants <strong class="text-blue-600">_________________</strong> → Recommend _____________________.</li>
+                            </ul>
+                        </li>
+                        <li>
+                            <strong>If ISP speed is > ___________ Gbps, recommend Wi-Fi 7:</strong>
+                             <ul class="list-circle list-inside pl-6 mt-2 space-y-2">
+                                <li>If user wants <strong class="text-purple-600">________________</strong> → Recommend <code>Netgear Nighthawk RS300</code>.</li>
+                                <li>If user wants <strong class="text-purple-600">________________</strong> → Recommend _____________________.</li>
+                                <li>If user wants <strong class="text-purple-600">________________</strong> → Recommend _____________________.</li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
             </section>
 
             <section class="mb-12">
@@ -125,9 +152,9 @@
 
             <section class="mb-12">
                 <h2 class="text-2xl font-bold text-slate-800 border-b pb-2 mb-4">
-                    <i class="fas fa-terminal text-slate-400 mr-2"></i>Sample Runs
+                    <i class="fas fa-terminal text-slate-400 mr-2"></i>Sample Output
                 </h2>
-                <p class="text-lg mb-4">Your program's interaction should look like the examples below. User input is shown in <span class="text-yellow-400">yellow</span>.</p>
+                <p class="text-lg mb-4">Your program's interaction should look like the examples below. Fill in the missing blanks. User input is shown in <span class="text-yellow-400">yellow</span>.</p>
                 
                 <h3 class="text-xl font-bold mt-6 mb-2">Sample 1: Wi-Fi 6 Recommendation (English)</h3>
                 <pre>
@@ -146,16 +173,26 @@ For _________________, I recommend the Silver Award winner: Asus RT-AX86U.
                 <h3 class="text-xl font-bold mt-8 mb-2" style="font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;">Sample 2: Wi-Fi 7 Recommendation (Chinese)</h3>
                 <pre>
 Welcome! What language are you talking? (Input 'English', '中文', '日本語', or '한국어')
-<span class="text-yellow-400">中文</span>
+<span class="text-yellow-400" style="font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;">中文</span>
 你好！你想買甚麼？
-<span class="text-yellow-400">路由器</span>
+<span class="text-yellow-400" style="font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;">路由器</span>
 好的。你的網絡供應商提供的理論速度是多少 Gbps？
-<span class="text-yellow-400">10</span>
+<span class="text-yellow-400" style="font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;">10</span>
 好的。你是一位進階用戶！你應該購買 Wi-Fi 7 路由器
 你的主要目標是什麼？ (A) ________________, (B) ________________, 或 (C) __________________？
-<span class="text-yellow-400">A</span>
+<span class="text-yellow-400" style="font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;">A</span>
 為了_______________，我建議金獎贏家： Netgear Nighthawk RS300.
                 </pre>
+            </section>
+
+                            <h3 class="text-xl font-bold mt-8 mb-2" style="font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;">Sample 3: Not buying Router (Korean)</h3>
+                <pre>
+Welcome! What language are you talking? (Input 'English', '中文', '日本語', or '한국어')
+<span class="text-yellow-400" style="font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;">한국어</span>
+안녕하세요! 무엇을 사고 싶으신가요?
+<span class="text-yellow-400" style="font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;">아이유</span>
+                </pre>
+                <p>Since 아이유 (IU) is a singer, which is not a router and not selling in the shop, so the program stops. </p><br><br>
             </section>
 
             <section class="mb-12">
@@ -179,14 +216,18 @@ Welcome! What language are you talking? (Input 'English', '中文', '日本語',
                  <h2 class="text-2xl font-bold text-slate-800 border-b pb-2 mb-4">
                      <i class="fas fa-file-arrow-up text-slate-400 mr-2"></i>Submission Guidelines
                 </h2>
+                <p>Do NOT copy program codes from another student. <br> Do NOT share actual program codes with other students (by emails, paper, WhatsApp, Google Doc, etc.). <br>
+                 Do NOT submit the homework using AI. Unreasonable work will be caught and you will be asked to explain the codes.</p>
                 <div class="bg-blue-50 border-l-4 border-blue-500 text-blue-800 p-6 rounded-r-lg">
                     <div class="flex items-start">
                         <i class="fas fa-info-circle text-2xl mr-4 mt-1"></i>
                         <div>
-                            <p class="font-bold text-lg">Important Instructions:</p>
+                           
                             <p class="font-bold text-red-600 text-xl my-3">
                                 <i class="fas fa-calendar-alt mr-2"></i>Submission Deadline: 13 November 2025
                             </p>
+
+                             <p class="font-bold text-lg">Important Instructions:</p>
                             <ul class="list-disc list-inside mt-2 space-y-1">
                                 <li>Submit <strong>only the <code>router_advisor.py</code></strong> file to Google Classroom.</li>
                                 <li>Do not zip or compress your file.</li>
@@ -195,6 +236,7 @@ Welcome! What language are you talking? (Input 'English', '中文', '日本語',
                         </div>
                     </div>
                 </div>
+                
             </section>
 
         </div>
