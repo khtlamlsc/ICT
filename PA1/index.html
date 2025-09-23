@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>F.3 ICT Project Assignment 1: Super Router Sales Decision Maker</title>
+    
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap" rel="stylesheet">
+    
+    <style>
+        /* Custom styles for a polished look */
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #f1f5f9; /* A lighter slate background */
+        }
+        /* Style for the code blocks */
+        pre {
+            background-color: #1e293b; /* Dark slate */
+            color: #e2e8f0;
+            padding: 1.5rem;
+            border-radius: 0.5rem;
+            font-family: 'Courier New', Courier, monospace;
+            white-space: pre-wrap;
+            word-wrap: break-word;
+        }
+        /* Custom list style for objectives */
+        .checklist li {
+            position: relative;
+            padding-left: 2rem;
+            margin-bottom: 0.75rem;
+        }
+        .checklist li::before {
+            content: '\f058'; /* Font Awesome check-circle icon */
+            font-family: 'Font Awesome 6 Free';
+            font-weight: 900;
+            position: absolute;
+            left: 0;
+            top: 0.1rem;
+            color: #22c55e; /* Green-500 */
+        }
+
+     
+    </style>
+</head>
+<body class="text-slate-700">
+
+    <header class="bg-white shadow-sm">
+        <div class="container mx-auto px-6 py-4">
+            <p class="text-xl font-bold text-blue-700">La Salle College</p>
+                      <p class="text-lg text-slate-500">2025-26 F.3 ICT Project Assignment 1</p>
+            <h1 class="text-3xl font-bold text-slate-800">
+                Super Router Sales Decision Maker
+            </h1>
+  
+        </div>
+    </header>
+
+    <main class="container mx-auto px-6 py-12">
+        
+        <div class="bg-white p-8 rounded-xl shadow-lg">
+
+            <section class="mb-12">
+                <h2 class="text-2xl font-bold text-slate-800 border-b pb-2 mb-4">
+                    <i class="fas fa-rocket text-slate-400 mr-2"></i>Introduction
+                </h2>
+                <img src="https://timgm.eprice.com.hk/hk/mobile/img/2022-04/01/219728/eprice_1_bf21f176ac206256c8a69ec54dabf2e8.jpg" style="max-width:600px;width:100%"  alt="Assignment Banner" class="w-full rounded-lg mb-3">
+                <p class="text-lg leading-relaxed">
+                    You are a junior developer at a major electronics retailer. Your manager wants a simple tool to help the sales team recommend the right kind of router to customers. 
+                    Your program will act as an expert advisor, asking customers a few simple questions to determine the best router for their needs based on the provided magazine article. 
+                    The key challenge is to implement this logic using simple conditional statements and support multiple languages to assist a diverse customer base.
+                    The tool needs to be straightforward, ask for the customer's internet plan speed, and then suggest a category of router.</p>
+                </p>
+            </section>
+            
+            <section class="mb-12">
+                <h2 class="text-2xl font-bold text-slate-800 border-b pb-2 mb-4">
+                    <i class="fas fa-folder-open text-slate-400 mr-2"></i>Resources
+                </h2>
+                <div class="flex flex-col sm:flex-row gap-4">
+                    <a href="#" class="w-full sm:w-auto flex-1 bg-blue-600 text-white font-bold py-3 px-6 rounded-lg hover:bg-blue-700 transition-colors inline-flex items-center justify-center">
+                        <i class="fas fa-book-open mr-3"></i> Read Magazine in eLibrary
+                    </a>
+                    <a href="./router_advisor.py" download class="w-full sm:w-auto flex-1 bg-gray-700 text-white font-bold py-3 px-6 rounded-lg hover:bg-gray-800 transition-colors inline-flex items-center justify-center">
+                        <i class="fas fa-download mr-3"></i> Download Skeleton Code
+                    </a>
+                </div>
+            </section>
+
+            <section class="mb-12">
+                <h2 class="text-2xl font-bold text-slate-800 border-b pb-2 mb-4">
+                    <i class="fas fa-bullseye text-slate-400 mr-2"></i>Objectives
+                </h2>
+                <ul class="text-lg leading-relaxed checklist">
+                    <li>Analyze requirements from a real-world document (a magazine article).</li>
+                    <li>Design and implement a decision-making process using conditional logic (`if-else`).</li>
+                    <li>Handle user input and perform basic data parsing.</li>
+                    <li>Structure a program that supports multiple languages.</li>
+                    <li>Create a user-friendly and interactive command-line interface.</li>
+                </ul>
+            </section>
+
+            <section class="mb-12">
+                <h2 class="text-2xl font-bold text-slate-800 border-b pb-2 mb-4">
+                     <i class="fas fa-tasks text-slate-400 mr-2"></i>Program Requirements
+                </h2>
+                <div class="text-lg leading-relaxed space-y-4">
+                    <p>Your program must follow this specific flow:</p>
+                    <ol class="list-decimal list-inside space-y-3 pl-4">
+                        <li><strong>Language Selection:</strong> First, ask the user for their preferred language (English, 中文, 日本語, 한국어).</li>
+                        <li><strong>Product Inquiry:</strong> Ask what product they want to buy. The program should only proceed if they enter the word for "Router" in their chosen language.</li>
+                        <li><strong>Speed Analysis:</strong> Ask for their ISP's theoretical internet speed in Gbps. You will need to parse the numerical value from their input (e.g., get `9.5` from `"9.5 Gbps"`).</li>
+                        <li><strong>Primary Recommendation:</strong> Based on the speed, use an `if-else` statement to recommend either a <strong>Wi-Fi 6</strong> or <strong>Wi-Fi 7</strong> router category.</li>
+                        <li><strong>Detailed Recommendation:</strong> After the category is chosen, ask a follow-up question to determine the user's primary need (e.g., budget, gaming, or coverage).</li>
+                        <li><strong>Final Recommendation:</strong> Based on their final answer, recommend one specific, award-winning router model from the magazine article.</li>
+                    </ol>
+                </div>
+            </section>
+
+
+            <section class="mb-12">
+                 <h2 class="text-2xl font-bold text-slate-800 border-b pb-2 mb-4">
+                     <i class="fas fa-comments text-slate-400 mr-2"></i>Frequently Asked Questions
+                </h2>
+                <p>Last updated 23/9/2025.</p>  <br>           
+                <div class="bg-green-50 border-l-4 border-green-500 text-green-800 p-6 rounded-r-lg">
+                    
+                    <div class="flex items-center">
+                        <i class="fas fa-question-circle text-2xl mr-4"></i>
+                        <div>
+                            <p class="font-bold">No Question have been asked yet.</p>
+                            <p class="mt-1">Check back later for clarification.</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section>
+                 <h2 class="text-2xl font-bold text-slate-800 border-b pb-2 mb-4">
+                     <i class="fas fa-file-arrow-up text-slate-400 mr-2"></i>Submission Guidelines
+                </h2>
+                <div class="bg-blue-50 border-l-4 border-blue-500 text-blue-800 p-6 rounded-r-lg">
+                    <div class="flex items-start">
+                        <i class="fas fa-info-circle text-2xl mr-4 mt-1"></i>
+                        <div>
+                            <p class="font-bold text-lg">Important Instructions:</p>
+                            <p class="font-bold text-red-600 text-xl my-3">
+                                <i class="fas fa-calendar-alt mr-2"></i>Submission Deadline: 13 November 2025
+                            </p>
+                            <ul class="list-disc list-inside mt-2 space-y-1">
+                                <li>Submit <strong>only the <code>router_advisor.py</code></strong> file to Google Classroom.</li>
+                                <li>Do not zip or compress your file.</li>
+                                <li>Ensure your program runs successfully in the lab environment before submitting.</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+        </div>
+    </main>
+    
+    <footer class="mt-12 py-6">
+        <div class="container mx-auto px-6 text-center text-slate-500">
+            <p>Page maintained by <a href="mailto:lam.kht@lasalle.edu.hk" id="handle" class="text-blue-600 hover:underline">Terry LAM</a></p>
+        </div>
+    </footer>
+
+</body>
+</html>
