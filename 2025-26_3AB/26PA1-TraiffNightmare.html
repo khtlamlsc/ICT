@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>F.3 ICT Lab 1: Trump Tariff & Trade (TTT) Simulator</title>
+    
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap" rel="stylesheet">
+    
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #f1f5f9;
+        }
+        
+        pre {
+            background-color: #202124;
+            color: #E8EAED;
+            padding: 1.5rem;
+            padding-top: 3rem;
+            border-radius: 0.5rem;
+            font-family: 'Courier New', Courier, monospace;
+            font-size: 0.95rem;
+            white-space: pre-wrap;
+            word-wrap: break-word;
+            position: relative;
+        }
+        .code-keyword { color: #CF8E6D; }
+        .code-function { color: #82AAFF; }
+        .code-string { color: #9CCC65; }
+        .code-number { color: #B5CEA8; }
+        .code-comment { color: #6A9955; font-style: italic; }
+        .code-operator { color: #E8EAED; }
+        .copy-btn {
+            position: absolute;
+            top: 0.5rem;
+            right: 0.5rem;
+            background-color: #4a5568;
+            color: white;
+            border: none;
+            padding: 0.25rem 0.75rem;
+            border-radius: 0.25rem;
+            cursor: pointer;
+            font-size: 0.8rem;
+        }
+        .copy-btn:hover {
+            background-color: #2d3748;
+        }
+        .user-input {
+            border: 1px solid #9ca3af; /* gray-400 */
+            background-color: #f8fafc; /* slate-50 */
+            color: #0f172a; /* slate-900 */
+            font-family: Arial, sans-serif;
+            padding: 2px 5px;
+            border-radius: 3px;
+            display: inline-block;
+        }
+    </style>
+</head>
+<body class="text-slate-700">
+
+    <header class="bg-white shadow-sm">
+        <div class="container mx-auto px-6 py-4">
+            <p class="text-xl font-bold text-blue-700">La Salle College</p>
+            <p class="text-lg text-slate-500">2025-26 F.3 ICT Lab 1</p>
+            <h1 class="text-3xl font-bold text-slate-800">
+                Trump Tariff & Trade (TTT) Simulator
+            </h1>
+        </div>
+    </header>
+
+    <main class="container mx-auto px-6 py-12">
+        
+  
+        <div class="bg-white p-8 rounded-xl shadow-lg">
+
+            <section class="mb-12">
+                   <div class="container mx-auto mt-4">
+        <img src="https://images.ft.com/v3/image/raw/ftcms%3Afffedf89-9dae-4830-a45c-bdaa8e734946?source=next-article&fit=scale-down&quality=highest&width=1440&dpr=1" alt="Trump and Xi Jinping Banner" class="w-full h-auto rounded-lg shadow-md">
+    </div>
+                <p class="text-lg leading-relaxed mt-4">
+                    A little story for you. When your teacher, Mr. Terry Lam, was a student, his programming tasks were about the Trump campaign. Now, years later, Mr. Lam is a teacher, and guess what? The theme is still Trump! He really didn't imagine this.
+                    <br><br>
+                    So, in honor of this timeless tradition, let's use Python to calculate the effects of one of his big-brain ideas: TRADE WARS! Why mess with a perfectly good relationship with China? Who knows! Let's code. It's gonna be YUGE.
+                </p>
+            </section>
+
+            <section class="mb-12">
+                <h2 class="text-2xl font-bold text-slate-800 border-b pb-2 mb-4">
+                     <i class="fas fa-tasks text-slate-400 mr-2"></i>In-Class Exercise (15 Mins)
+                </h2>
+                <div class="text-lg leading-relaxed space-y-4">
+                    <p>Open the <strong>Lab 1 Colab Notebook</strong> in <strong>Google Classroom</strong> during lesson (will be released on the lab day). Starting with the skeleton code provided, follow the steps below to complete the exercise.</p>
+                </div>
+                <br>
+        <ol class="list-decimal ml-6 space-y-4 text-lg">
+          <li>
+            <strong>1️⃣ Add a Comment</strong><br>
+            At the top of your Colab code, add a Python comment with your full name and class.<br>
+            Example: <code class="bg-slate-100 rounded px-1 text-sm"># Name: John Chan, Class: F.3A</code>
+          </li>
+<br>
+          
+          <li>
+            <strong>2️⃣ Variables & Arithmetic</strong><br>
+            By using variables <code>import_value</code>, and <code>tariff_rate</code>.  
+            Calculate the extra cost and total import cost.
+          </li>
+<br>
+<li>
+            <strong>3️⃣ Print Output & Comments</strong><br>
+            After calculation, print a “Breaking News” line announcing his peaceful mindset and the new tariff.<br>
+            <code class="bg-slate-100 rounded px-1 text-sm">Trump is the "peaceful" president in U.S. history.<br>
+Breaking News: New tariffs on imported electronics announced!</code>
+          </li>
+<br>
+          <li>
+            <strong>4️⃣ User Input & String Formatting</strong><br>
+            Allow users to enter the <code>country</code> and <code>tariff rate</code>, since tariffs change frequently. Calculate the latest import cost and the percentage changes of the goods.
+          </li>
+        </ol>
+      </section>
+            </section>
+
+            <section class="mb-12">
+                <h2 class="text-2xl font-bold text-slate-800 border-b pb-2 mb-4">
+                    <i class="fas fa-terminal text-slate-400 mr-2"></i>Sample Output
+                </h2>
+                <div class="relative">
+                    <button class="copy-btn"><i class="fas fa-copy mr-1"></i> Copy</button>
+                    <pre id="sample-output">
+Welcome to the TTT Simulator!
+Original Import Value (USD): 400 billion
+Extra Cost Due to Tariffs (USD): 100.0 billion
+Total Import Cost After Tariffs (USD): 500.0 billion
+
+Trump is the "peaceful" president in U.S. history.
+Breaking News: New tariffs on imported electronics announced!
+
+--- Tariff Impact ---
+Enter the affected country (e.g. China): <span class="user-input">China</span>
+Enter the new tariff rate for China (as a %): <span class="user-input">100</span>
+
+Updated Tariff Summary:
+Country: China
+Updated Total Import Cost: 800.00 billion USD
+Percentage Change of Import Cost: 60.0%
+                    </pre>
+                </div>
+            </section>
+            
+            <section>
+                 <h2 class="text-2xl font-bold text-slate-800 border-b pb-2 mb-4">
+                     <i class="fas fa-file-arrow-up text-slate-400 mr-2"></i>Submission
+                </h2>
+                <div class="bg-blue-50 border-l-4 border-blue-500 text-blue-800 p-6 rounded-r-lg">
+                    <div class="flex items-start">
+                        <i class="fas fa-info-circle text-2xl mr-4 mt-1"></i>
+                        <div>
+                            <p class="font-bold text-red-600 text-xl my-3">
+                                <i class="fas fa-clock mr-2"></i>Time Limit: 15 Minutes
+                            </p>
+                             <p class="font-bold text-lg">Instructions:</p>
+                            <ul class="list-disc list-inside mt-2 space-y-1">
+                                <li>Complete the exercise within the 15-minute time limit.</li>
+                                <li>Submit your completed Google Colab notebook to Google Classroom.</li>
+                                <li>The submission link will close automatically.</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+        </div>
+    </main>
+    
+    <footer class="mt-12 py-6">
+        <div class="container mx-auto px-6 text-center text-slate-500">
+            <p>Page maintained by <a href="mailto:lam.kht@lasalle.edu.hk" class="text-blue-600 hover:underline">Mr. Terry LAM</a></p>
+        </div>
+    </footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            document.querySelectorAll('.copy-btn').forEach(button => {
+                button.addEventListener('click', () => {
+                    const pre = button.parentElement;
+                    const content = pre.querySelector('code, pre'); // Target either code or pre tag
+                    
+                    // Create a temporary element to hold the text for copying
+                    const temp = document.createElement('textarea');
+                    temp.value = content.innerText;
+                    document.body.appendChild(temp);
+                    temp.select();
+                    document.execCommand('copy');
+                    document.body.removeChild(temp);
+                    
+                    button.innerHTML = '<i class="fas fa-check mr-1"></i> Copied!';
+                    setTimeout(() => {
+                        button.innerHTML = '<i class="fas fa-copy mr-1"></i> Copy';
+                    }, 2000);
+                });
+            });
+        });
+    </script>
+
+</body>
+</html>
