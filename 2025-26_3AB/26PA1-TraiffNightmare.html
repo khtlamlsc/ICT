@@ -33,11 +33,19 @@
             position: relative;
         }
         .code-keyword { color: #6ec6b2; }
-        .code-function { color: #dccf89; }
+        .code-function { color: #d2dbac; }
         .code-string { color: #ffbd9a; }
         .code-number { color: #b9cd9f; }
         .code-comment { color: #76b570; font-style: italic; }
         .code-operator { color: #E8EAED; }
+
+        .code-keyword-inline { color: #3c7593; }
+        .code-function-inline { color: #675223; }
+        .code-string-inline { color: #972636; }
+        .code-number-inline { color: #2c6446; }
+        .code-comment-inline { color: #337f25; font-style: italic; }
+        .code-operator-inline { color: #000000; }
+
         .copy-btn {
             position: absolute;
             top: 0.5rem;
@@ -168,7 +176,7 @@ Note that you have to print the double quotation mark in Python, there are sever
             <strong>4️⃣ User Input & String Formatting</strong><br>
             Allow users to enter the <b>country</b> and <b>tariff rate</b>, since tariffs change frequently. Calculate the latest import cost and the percentage changes of the import cost of the goods. <br>
 <br>
-            Note that <code class="language-python"><span class="code-function">input</span>()</code> function can not print more than one input. You cannot concatenate the strings using "<code>,</code>" by <code class="language-python"><span class="code-function">input</span>()</code>.
+            Note that <code class="language-python"><span class="code-function-inline">input</span>()</code> function is designed to display a single prompt message. It does not support displaying multiple, comma-separated messages "<code>,</code>" directly within its prompt argument in the way <code class="language-python"><span class="code-function-inline">print</span>()</code> does.
         </ol>
       </section>
             </section>
