@@ -49,6 +49,7 @@
             border-radius: 0.25rem;
             cursor: pointer;
             font-size: 0.8rem;
+            z-index: 10;
         }
         .copy-btn:hover {
             background-color: #2d3748;
@@ -90,7 +91,7 @@
                 <p class="text-lg leading-relaxed mt-4">
                     A little story for you. When your teacher, Mr. Terry Lam, was a student, his programming tasks were about the Trump electorial campaign. Now, years later, Mr. Lam is a teacher, and guess what? The theme is still Trump! He really didn't imagine this.
                     <br><br>
-                    So, in honor of this timeless tradition, let's use Python to calculate the effects of one of his "big-brain" ideas: TRADE WARS! It's gonna be YUGE. Why mess with a perfectly good relationship with China? Who knows! With China's countermeasures are swift, and we will see it through to the end. China MUST WIN! Let's code and let Trump see how genius Chinese students are. 
+                    So, in honor of this timeless tradition, let's use Python to calculate the effects of one of his "big-brain" ideas: TRADE WARS! It's gonna be YUGE. HOW DARE HE!💥 Why mess with a perfectly good relationship with China? Who knows! With China's countermeasures are swift, and we will see it through to the end. China MUST WIN! 🇨🇳🇨🇳🇨🇳 Let's code and let Trump see how genius Chinese students are. 
                 </p>
             </section>
 
@@ -150,13 +151,24 @@
             <strong>3️⃣ Print Output & Comments</strong><br>
             After calculation, print a “Breaking News” line announcing his peaceful mindset and the new tariff.<br>
             <code class="bg-slate-100 rounded px-1 text-sm">Trump is the "peaceful" president in U.S. history.<br>
-Breaking News: New tariffs on imported electronics announced!</code>
+Breaking News: New tariffs on imported electronics announced!</code><br>
+
+Note that you have to print the double quotation mark in Python, there are several method are available. The easiest way: You may define your string in the opposite Quotation mark (i.e. Single Quotation mark).
+<br><br>
+<div class="relative">
+                    <button class="copy-btn"><i class="fas fa-copy mr-1"></i> Copy</button>
+                    <pre><code class="language-python"><span class="code-comment"># define in the opposite Quotation mark</span>
+<span class="code-function">print</span>(<span class="code-string">'Terry said: "It's okay to print double quotation mark now!"'</span>)
+</code></pre>
+                </div>
+
           </li>
 <br>
           <li>
             <strong>4️⃣ User Input & String Formatting</strong><br>
-            Allow users to enter the <b>country</b> and <b>tariff rate</b>, since tariffs change frequently. Calculate the latest import cost and the percentage changes of the import cost of the goods.
-          </li>
+            Allow users to enter the <b>country</b> and <b>tariff rate</b>, since tariffs change frequently. Calculate the latest import cost and the percentage changes of the import cost of the goods. <br>
+<br>
+            Note that <code class="language-python"><span class="code-function">input</span>()</code> function can not print more than one input. You cannot concatenate the strings using "<code>,</code>" by <code class="language-python"><span class="code-function">input</span>()</code>.
         </ol>
       </section>
             </section>
@@ -204,20 +216,18 @@ Percentage Change of Import Cost: 60.0%
             document.querySelectorAll('.copy-btn').forEach(button => {
                 button.addEventListener('click', () => {
                     const pre = button.parentElement;
-                    const content = pre.querySelector('code, pre'); // Target either code or pre tag
-                    
-                    // Create a temporary element to hold the text for copying
-                    const temp = document.createElement('textarea');
-                    temp.value = content.innerText;
-                    document.body.appendChild(temp);
-                    temp.select();
-                    document.execCommand('copy');
-                    document.body.removeChild(temp);
-                    
-                    button.innerHTML = '<i class="fas fa-check mr-1"></i> Copied!';
-                    setTimeout(() => {
-                        button.innerHTML = '<i class="fas fa-copy mr-1"></i> Copy';
-                    }, 2000);
+                    const content = pre.querySelector('code, pre'); // Targets the content inside the parent
+                    const textToCopy = content.innerText;
+
+                    navigator.clipboard.writeText(textToCopy).then(() => {
+                        button.innerHTML = '<i class="fas fa-check mr-1"></i> Copied!';
+                        setTimeout(() => {
+                            button.innerHTML = '<i class="fas fa-copy mr-1"></i> Copy';
+                        }, 2000);
+                    }).catch(err => {
+                        console.error('Failed to copy text: ', err);
+                        alert('Failed to copy');
+                    });
                 });
             });
         });
